@@ -392,6 +392,60 @@
       "label": "t:settings.background_overlay"
     },
     {
+      "type": "header",
+      "content": "Glass effect"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_glass_effect",
+      "label": "Enable glass effect",
+      "info": "Creates a frosted glass effect with backdrop blur",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "glass_style",
+      "label": "Glass style",
+      "options": [
+        {
+          "value": "light",
+          "label": "Light"
+        },
+        {
+          "value": "dark",
+          "label": "Dark"
+        },
+        {
+          "value": "subtle",
+          "label": "Subtle"
+        }
+      ],
+      "default": "light",
+      "visible_if": "{{ block.settings.enable_glass_effect }}"
+    },
+    {
+      "type": "range",
+      "id": "glass_blur",
+      "label": "Blur intensity",
+      "min": 5,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "default": 20,
+      "visible_if": "{{ block.settings.enable_glass_effect }}"
+    },
+    {
+      "type": "range",
+      "id": "glass_opacity",
+      "label": "Background opacity",
+      "min": 0,
+      "max": 50,
+      "step": 5,
+      "unit": "%",
+      "default": 10,
+      "visible_if": "{{ block.settings.enable_glass_effect }}"
+    },
+    {
       "type": "color",
       "id": "overlay_color",
       "label": "t:settings.overlay_color",
