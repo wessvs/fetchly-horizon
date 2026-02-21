@@ -1375,12 +1375,12 @@
                       "name": "t:names.text",
                       "settings": {
                         "text": "<p>Join Brave Rose rewards and unlock special perks with every purchase</p>",
-                        "width": "fit-content",
-                        "max_width": "normal",
+                        "width": "100%",
+                        "max_width": "none",
                         "alignment": "left",
-                        "type_preset": "rte",
+                        "type_preset": "custom",
                         "font": "var(--font-body--family)",
-                        "font_size": "1rem",
+                        "font_size": "1.125rem",
                         "line_height": "normal",
                         "letter_spacing": "normal",
                         "case": "none",
@@ -1441,7 +1441,8 @@
                           "name": "t:names.icon",
                           "settings": {
                             "icon": "price_tag",
-                            "width": 24,
+                            "image_upload": "shopify://shop_images/local_shipping.svg",
+                            "width": 16,
                             "link": "",
                             "open_in_new_tab": false
                           },
@@ -1524,7 +1525,8 @@
                           "name": "t:names.icon",
                           "settings": {
                             "icon": "price_tag",
-                            "width": 24,
+                            "image_upload": "shopify://shop_images/release_alert.svg",
+                            "width": 16,
                             "link": "",
                             "open_in_new_tab": false
                           },
@@ -1607,7 +1609,8 @@
                           "name": "t:names.icon",
                           "settings": {
                             "icon": "price_tag",
-                            "width": 24,
+                            "image_upload": "shopify://shop_images/rewarded_ads.svg",
+                            "width": 16,
                             "link": "",
                             "open_in_new_tab": false
                           },
