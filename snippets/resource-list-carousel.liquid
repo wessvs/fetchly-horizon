@@ -51,13 +51,9 @@
   {% endif %}
 {% endcapture %}
 
-{% liquid
-  assign dots_color = settings.dots_color | default: '#A08977'
-%}
-
 <div
-  class="resource-list__carousel{% if show_dots %} resource-list__carousel--custom-dots{% endif %}"
-  style="{{ gutter_style }} --slide-width-max: {{ slide_width_max | default: '300px' }};{% if show_dots %} --dots-color: {{ dots_color }};{% endif %}"
+  class="resource-list__carousel"
+  style="{{ gutter_style }} --slide-width-max: {{ slide_width_max | default: '300px' }};"
 >
   {% render 'slideshow',
     ref: slideshow_ref,
@@ -76,13 +72,13 @@
 </div>
 
 {% stylesheet %}
-  .resource-list__carousel--custom-dots slideshow-controls {
+  .resource-list__carousel slideshow-controls:has(.slideshow-controls__dots) {
     mix-blend-mode: normal;
   }
 
-  .resource-list__carousel--custom-dots .slideshow-controls__dots button {
-    --color: color-mix(in srgb, var(--dots-color, #A08977) 40%, transparent);
-    --color-active: var(--dots-color, #A08977);
-    --color-hover: color-mix(in srgb, var(--dots-color, #A08977) 70%, transparent);
+  .resource-list__carousel .slideshow-controls__dots button {
+    --color: rgb(var(--color-foreground-rgb) / 0.4);
+    --color-active: var(--color-foreground);
+    --color-hover: rgb(var(--color-foreground-rgb) / 0.7);
   }
 {% endstylesheet %}
