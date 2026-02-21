@@ -1169,6 +1169,7 @@
       "blocks": {
         "slide_YNCXEA": {
           "type": "_slide",
+          "name": "Membership Section",
           "settings": {
             "media_type_1": "image",
             "image_1": "shopify://shop_images/UGC_Gallery.png",
