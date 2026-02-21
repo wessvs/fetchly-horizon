@@ -1240,7 +1240,7 @@
                     "background_color": "#00000026",
                     "corner_radius": 0,
                     "padding-block-start": 0,
-                    "padding-block-end": 0,
+                    "padding-block-end": 8,
                     "padding-inline-start": 0,
                     "padding-inline-end": 0
                   },
@@ -1279,7 +1279,7 @@
                     "background_color": "#00000026",
                     "corner_radius": 0,
                     "padding-block-start": 0,
-                    "padding-block-end": 0,
+                    "padding-block-end": 8,
                     "padding-inline-start": 0,
                     "padding-inline-end": 0
                   },
@@ -1290,7 +1290,7 @@
                 "text_n9VJnj"
               ]
             },
-            "accordion_row_8RFKVP": {
+            "accordion_row_CDjeB3": {
               "type": "_accordion-row",
               "settings": {
                 "heading": "Question text goes here",
@@ -1299,7 +1299,7 @@
                 "width": 20
               },
               "blocks": {
-                "text_BxCrYe": {
+                "text_WLDrnb": {
                   "type": "text",
                   "settings": {
                     "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>",
@@ -1318,7 +1318,7 @@
                     "background_color": "#00000026",
                     "corner_radius": 0,
                     "padding-block-start": 0,
-                    "padding-block-end": 0,
+                    "padding-block-end": 8,
                     "padding-inline-start": 0,
                     "padding-inline-end": 0
                   },
@@ -1326,10 +1326,10 @@
                 }
               },
               "block_order": [
-                "text_BxCrYe"
+                "text_WLDrnb"
               ]
             },
-            "accordion_row_CDUkyN": {
+            "accordion_row_XFPWq7": {
               "type": "_accordion-row",
               "settings": {
                 "heading": "Question text goes here",
@@ -1338,7 +1338,7 @@
                 "width": 20
               },
               "blocks": {
-                "text_atjjMD": {
+                "text_jBMFAG": {
                   "type": "text",
                   "settings": {
                     "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>",
@@ -1357,7 +1357,7 @@
                     "background_color": "#00000026",
                     "corner_radius": 0,
                     "padding-block-start": 0,
-                    "padding-block-end": 0,
+                    "padding-block-end": 8,
                     "padding-inline-start": 0,
                     "padding-inline-end": 0
                   },
@@ -1365,10 +1365,10 @@
                 }
               },
               "block_order": [
-                "text_atjjMD"
+                "text_jBMFAG"
               ]
             },
-            "accordion_row_3ibRcz": {
+            "accordion_row_R8YWW8": {
               "type": "_accordion-row",
               "settings": {
                 "heading": "Question text goes here",
@@ -1377,7 +1377,7 @@
                 "width": 20
               },
               "blocks": {
-                "text_gKXHKf": {
+                "text_MMPGAy": {
                   "type": "text",
                   "settings": {
                     "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>",
@@ -1396,7 +1396,7 @@
                     "background_color": "#00000026",
                     "corner_radius": 0,
                     "padding-block-start": 0,
-                    "padding-block-end": 0,
+                    "padding-block-end": 8,
                     "padding-inline-start": 0,
                     "padding-inline-end": 0
                   },
@@ -1404,16 +1404,16 @@
                 }
               },
               "block_order": [
-                "text_gKXHKf"
+                "text_MMPGAy"
               ]
             }
           },
           "block_order": [
             "accordion_row_TcBmgw",
             "accordion_row_hempyR",
-            "accordion_row_8RFKVP",
-            "accordion_row_CDUkyN",
-            "accordion_row_3ibRcz"
+            "accordion_row_CDjeB3",
+            "accordion_row_XFPWq7",
+            "accordion_row_R8YWW8"
           ]
         }
       },
