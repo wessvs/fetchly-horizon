@@ -800,7 +800,7 @@
         "max_collections": 4,
         "icons_style": "none",
         "icons_shape": "square",
-        "show_dots": false,
+        "show_dots": true,
         "section_width": "page-width",
         "gap": 12,
         "color_scheme": "scheme-1",
