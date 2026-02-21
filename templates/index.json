@@ -1626,7 +1626,7 @@
         "equal_columns": true,
         "limit_details_width": false,
         "gap": 48,
-        "color_scheme": "",
+        "color_scheme": "scheme-5",
         "padding-block-start": 40,
         "padding-block-end": 40
       }
