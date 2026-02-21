@@ -39,6 +39,18 @@
   </span>
 {%- endif -%}
 
+{% stylesheet %}
+  .inline-title--border {
+    display: inline-block;
+    border-style: var(--inline-border-style, solid);
+    border-width: var(--inline-border-width, 1px);
+    border-color: var(--inline-border-color, currentColor);
+    border-radius: var(--inline-border-radius, 0);
+    padding-block: var(--inline-padding-block, 4px);
+    padding-inline: var(--inline-padding-inline, 12px);
+  }
+{% endstylesheet %}
+
 {% schema %}
 {
   "name": "t:names.collection_title",
