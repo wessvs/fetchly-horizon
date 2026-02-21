@@ -273,7 +273,7 @@
           "selected_variant_background_color": "rgba(0,0,0,0)",
           "selected_variant_text_color": "#fbf7f2",
           "selected_variant_border_color": "#fbf7f2",
-          "selected_variant_hover_background_color": "#1a1a1a",
+          "selected_variant_hover_background_color": "rgba(0,0,0,0)",
           "selected_variant_hover_text_color": "#74342b",
           "selected_variant_hover_border_color": "#ffffff0d"
         }
