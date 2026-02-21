@@ -26,6 +26,8 @@
   if settings.icons_style != 'none'
     assign show_arrows = true
   endif
+
+  assign show_dots = settings.show_dots | default: false
 %}
 
 {% capture slides %}
