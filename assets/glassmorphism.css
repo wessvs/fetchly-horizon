@@ -1,0 +1,86 @@
+/* 
+ * Glassmorphism Effect for Group Blocks
+ * Creates a frosted glass effect with backdrop blur
+ */
+
+/* Base glassmorphism class for group blocks */
+.group-block--glass,
+.group-block.color-scheme-6,
+.hero .group-block-content .group-block {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Apply glassmorphism to nested groups in hero section */
+.hero .group-block-content > .group-block > .group-block-content > .group-block {
+  background: rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+/* Hover effect for glass cards */
+.hero .group-block-content > .group-block > .group-block-content > .group-block:hover {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border-color: rgba(255, 255, 255, 0.25) !important;
+  transform: translateY(-2px);
+  box-shadow: 
+    0 12px 40px rgba(0, 0, 0, 0.15),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+/* Override color scheme background for glass effect */
+.hero .group-block-content > .group-block > .group-block-content > .group-block.color-scheme-6,
+.hero .group-block-content > .group-block > .group-block-content > .group-block[class*="color-scheme"] {
+  --color-background: transparent;
+  background-color: transparent !important;
+}
+
+/* Ensure text remains readable on glass */
+.hero .group-block-content > .group-block > .group-block-content > .group-block .text-block,
+.hero .group-block-content > .group-block > .group-block-content > .group-block p {
+  color: var(--color-foreground);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Icon styling on glass */
+.hero .group-block-content > .group-block > .group-block-content > .group-block .icon-block svg,
+.hero .group-block-content > .group-block > .group-block-content > .group-block .icon-block img {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+/* Alternative: More subtle glass effect */
+.group-block--glass-subtle {
+  background: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(10px) saturate(150%);
+  -webkit-backdrop-filter: blur(10px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Dark glass variant */
+.group-block--glass-dark {
+  background: rgba(0, 0, 0, 0.2) !important;
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 749px) {
+  .hero .group-block-content > .group-block > .group-block-content > .group-block {
+    backdrop-filter: blur(15px) saturate(160%);
+    -webkit-backdrop-filter: blur(15px) saturate(160%);
+  }
+}
+
+/* Fallback for browsers that don't support backdrop-filter */
+@supports not (backdrop-filter: blur(20px)) {
+  .hero .group-block-content > .group-block > .group-block-content > .group-block {
+    background: rgba(30, 30, 30, 0.85) !important;
+  }
+}
+
