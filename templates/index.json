@@ -1173,9 +1173,9 @@
           "settings": {
             "aspect_ratio": "adapt",
             "constrain_to_viewport": true,
-            "media_fit": "contain",
+            "media_fit": "cover",
             "media_radius": 0,
-            "extend_media": false,
+            "extend_media": true,
             "zoom": true,
             "video_loop": false,
             "hide_variants": true,
@@ -1306,11 +1306,26 @@
                     "padding-inline-end": 0
                   },
                   "blocks": {}
+                },
+                "swatches_8bzrRL": {
+                  "type": "swatches",
+                  "name": "t:names.swatches",
+                  "settings": {
+                    "product_swatches_alignment": "flex-start",
+                    "product_swatches_alignment_mobile": "flex-start",
+                    "hide_padding": false,
+                    "product_swatches_padding_top": 4,
+                    "product_swatches_padding_bottom": 0,
+                    "product_swatches_padding_left": 0,
+                    "product_swatches_padding_right": 0
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
                 "product_title_3encNe",
-                "price_Cf4zRP"
+                "price_Cf4zRP",
+                "swatches_8bzrRL"
               ]
             },
             "review_tLEkfc": {
