@@ -1199,7 +1199,7 @@
           "settings": {
             "icon": "caret",
             "dividers": true,
-            "type_preset": "h5",
+            "type_preset": "",
             "inherit_color_scheme": true,
             "color_scheme": "",
             "border": "none",
@@ -1215,7 +1215,7 @@
             "accordion_row_TcBmgw": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "What is the return policy?",
+                "heading": "Do you have US-based stock?",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
@@ -1224,7 +1224,7 @@
                 "text_nEhWwE": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Our goal is for every customer to be totally satisfied with their purchase. If this isn't the case, let us know and we'll do our best to work with you to make it right.</p>",
+                    "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -1251,19 +1251,19 @@
                 "text_nEhWwE"
               ]
             },
-            "accordion_row_ErkFUJ": {
+            "accordion_row_hempyR": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "Are any purchases final sale?",
+                "heading": "Question text goes here",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
               },
               "blocks": {
-                "text_XpVwTy": {
+                "text_n9VJnj": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>We are unable to accept returns on certain items. These will be carefully marked before purchase.</p>",
+                    "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -1287,24 +1287,22 @@
                 }
               },
               "block_order": [
-                "text_XpVwTy"
+                "text_n9VJnj"
               ]
             },
-            "accordion_row_6pXcaB": {
+            "accordion_row_8RFKVP": {
               "type": "_accordion-row",
-              "name": "t:names.accordion_row",
               "settings": {
-                "heading": "When will I get my order?",
+                "heading": "Question text goes here",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
               },
               "blocks": {
-                "text_qCpNbq": {
+                "text_BxCrYe": {
                   "type": "text",
-                  "name": "t:names.text",
                   "settings": {
-                    "text": "<p>We will work quickly to ship your order as soon as possible. Once your order has shipped, you will receive an email with further information. Delivery times vary depending on your location.</p>",
+                    "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -1328,24 +1326,22 @@
                 }
               },
               "block_order": [
-                "text_qCpNbq"
+                "text_BxCrYe"
               ]
             },
-            "accordion_row_qtadmx": {
+            "accordion_row_CDUkyN": {
               "type": "_accordion-row",
-              "name": "t:names.accordion_row",
               "settings": {
-                "heading": "Where are your products manufactured?",
+                "heading": "Question text goes here",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
               },
               "blocks": {
-                "text_B3MczM": {
+                "text_atjjMD": {
                   "type": "text",
-                  "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Our products are manufactured both locally and globally. We carefully select our manufacturing partners to ensure our products are high quality and a fair value.</p>",
+                    "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -1369,24 +1365,22 @@
                 }
               },
               "block_order": [
-                "text_B3MczM"
+                "text_atjjMD"
               ]
             },
-            "accordion_row_akkhVX": {
+            "accordion_row_3ibRcz": {
               "type": "_accordion-row",
-              "name": "t:names.accordion_row",
               "settings": {
-                "heading": "How much does shipping cost?",
+                "heading": "Question text goes here",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
               },
               "blocks": {
-                "text_AJfGwY": {
+                "text_gKXHKf": {
                   "type": "text",
-                  "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Shipping is calculated based on your location and the items in your order. You will always know the shipping price before you purchase.</p>",
+                    "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -1410,16 +1404,16 @@
                 }
               },
               "block_order": [
-                "text_AJfGwY"
+                "text_gKXHKf"
               ]
             }
           },
           "block_order": [
             "accordion_row_TcBmgw",
-            "accordion_row_ErkFUJ",
-            "accordion_row_6pXcaB",
-            "accordion_row_qtadmx",
-            "accordion_row_akkhVX"
+            "accordion_row_hempyR",
+            "accordion_row_8RFKVP",
+            "accordion_row_CDUkyN",
+            "accordion_row_3ibRcz"
           ]
         }
       },
