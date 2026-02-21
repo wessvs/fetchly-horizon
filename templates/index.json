@@ -2069,8 +2069,8 @@
                 "placeholder": "",
                 "padding-block-start": 16,
                 "padding-block-end": 16,
-                "padding-inline-start": 16,
-                "padding-inline-end": 16
+                "padding-inline-start": 32,
+                "padding-inline-end": 32
               },
               "blocks": {
                 "text_cKKJhx": {
