@@ -40,6 +40,17 @@
   {% endfor %}
 {% endcapture %}
 
+{% capture slideshow_controls %}
+  {% if show_dots %}
+    {% render 'slideshow-controls',
+      style: 'dots',
+      item_count: slide_count,
+      show_arrows: false,
+      pagination_position: 'center'
+    %}
+  {% endif %}
+{% endcapture %}
+
 <div
   class="resource-list__carousel"
   style="{{ gutter_style }} --slide-width-max: {{ slide_width_max | default: '300px' }};"
@@ -55,6 +66,7 @@
     infinite: false,
     initial_slide: 0,
     slide_count: slide_count,
-    slideshow_gutters: slideshow_gutters
+    slideshow_gutters: slideshow_gutters,
+    controls: slideshow_controls
   %}
 </div>
