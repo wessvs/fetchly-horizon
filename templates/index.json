@@ -980,6 +980,20 @@
               },
               "blocks": {}
             },
+            "variant_picker_NEkpNj": {
+              "type": "variant-picker",
+              "name": "t:names.product_variant_picker",
+              "settings": {
+                "variant_style": "buttons",
+                "show_swatches": true,
+                "alignment": "left",
+                "padding-block-start": 0,
+                "padding-block-end": 8,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
             "swatches_nDfcHz": {
               "type": "swatches",
               "name": "t:names.swatches",
@@ -1218,6 +1232,7 @@
           },
           "block_order": [
             "product_card_gallery_677WP3",
+            "variant_picker_NEkpNj",
             "swatches_nDfcHz",
             "product_title_YXxMTj",
             "text_RRqPWy",
