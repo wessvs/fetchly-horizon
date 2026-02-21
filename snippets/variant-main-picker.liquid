@@ -94,8 +94,20 @@
               {% if product_option_value.size > longest_value and option_id_attribute %}
                 {% assign longest_value = product_option_value.size %}
               {% endif %}
+              
+              {%- liquid
+                # Get the color from metafield if using color circles
+                assign metafield_color = nil
+                if use_color_circles and product_option_value.variant
+                  assign metafield_color = product_option_value.variant.metafields[color_metafield_namespace][color_metafield_key]
+                endif
+              -%}
+              
               <label
-                class="variant-option__button-label{% if variant_style == 'swatch' %} variant-option__button-label--has-swatch{% endif %}"
+                class="variant-option__button-label{% if variant_style == 'swatch' %} variant-option__button-label--has-swatch{% elsif use_color_circles and metafield_color %} variant-option__button-label--color-circle{% endif %}"
+                {% if use_color_circles and metafield_color %}
+                  title="{{ product_option_value | escape }}"
+                {% endif %}
               >
                 <input
                   type="radio"
@@ -138,6 +150,11 @@
                     variant_image: featured_media,
                     mode: 'unscaled'
                   %}
+                {% elsif use_color_circles and metafield_color %}
+                  <span
+                    class="variant-option__color-circle"
+                    style="--color-circle-bg: {{ metafield_color }};"
+                  ></span>
                 {% else %}
                   {% if product_option_value.available == true %}
                     <span
@@ -316,5 +333,55 @@
   .variant-picker--right .variant-option {
     text-align: right;
     justify-content: right;
+  }
+
+  /* Color circles from metafield */
+  .variant-option--color-circles {
+    gap: var(--gap-sm);
+  }
+
+  .variant-option__button-label--color-circle {
+    padding: 0;
+    width: auto;
+    min-width: auto;
+    border: none;
+    background: transparent;
+  }
+
+  .variant-option__color-circle {
+    display: block;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--color-circle-bg, #ccc);
+    border: 2px solid rgb(var(--color-foreground-rgb) / 0.15);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 0.1);
+  }
+
+  .variant-option__button-label--color-circle:has(input:checked) .variant-option__color-circle {
+    border-color: var(--color-foreground);
+    box-shadow: 0 0 0 2px var(--color-background), 0 0 0 4px var(--color-foreground);
+  }
+
+  .variant-option__button-label--color-circle:hover .variant-option__color-circle {
+    transform: scale(1.1);
+  }
+
+  .variant-option__button-label--color-circle:has(input[aria-disabled="true"]) .variant-option__color-circle {
+    opacity: 0.4;
+    position: relative;
+  }
+
+  .variant-option__button-label--color-circle:has(input[aria-disabled="true"]) .variant-option__color-circle::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -2px;
+    right: -2px;
+    height: 2px;
+    background: var(--color-foreground);
+    transform: rotate(-45deg);
+    opacity: 0.6;
   }
 {% endstylesheet %}
