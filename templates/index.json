@@ -1402,7 +1402,7 @@
       },
       "name": "t:names.featured_product_information",
       "settings": {
-        "product": "",
+        "product": "product-name-4",
         "content_width": "content-center-aligned",
         "desktop_media_position": "left",
         "equal_columns": true,
