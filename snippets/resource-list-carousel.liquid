@@ -70,3 +70,15 @@
     controls: slideshow_controls
   %}
 </div>
+
+{% stylesheet %}
+  .resource-list__carousel slideshow-controls:has(.slideshow-controls__dots) {
+    mix-blend-mode: normal;
+  }
+
+  .resource-list__carousel .slideshow-controls__dots button {
+    --color: rgb(var(--color-foreground-rgb) / 0.4);
+    --color-active: var(--color-foreground);
+    --color-hover: rgb(var(--color-foreground-rgb) / 0.7);
+  }
+{% endstylesheet %}
