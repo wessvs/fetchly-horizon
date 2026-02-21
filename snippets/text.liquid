@@ -43,6 +43,9 @@
     if block_settings.background
       echo ' text-block--background '
     endif
+    if block_settings.enable_border
+      echo ' text-block--border '
+    endif
     if is_rte
       echo ' rte '
     endif
@@ -66,6 +69,12 @@
       --text-background-color: {{ block_settings.background_color | default: 'rgb(255 255 255 / 1.0)' }};
       --text-corner-radius: {{ block_settings.corner_radius }}px;
       --text-padding: max(var(--padding-2xs), calc((var(--text-corner-radius) + var(--padding-xs)) * (1 - cos(45deg))));
+    {% endif %}
+    {% if block_settings.enable_border %}
+      --text-border-style: {{ block_settings.border_style | default: 'solid' }};
+      --text-border-width: {{ block_settings.border_width | default: 1 }}px;
+      --text-border-color: {{ block_settings.border_color | default: '#000000' }};
+      --text-border-radius: {{ block_settings.border_radius | default: 0 }}px;
     {% endif %}
   "
 
