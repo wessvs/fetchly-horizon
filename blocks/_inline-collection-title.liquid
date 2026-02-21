@@ -20,36 +20,13 @@
       custom-typography
       {% if block_settings.weight != blank %}custom-font-weight{% endif %}
       {% if block_settings.font_size != blank %}custom-font-size{% endif %}
-      {% if block_settings.enable_border %}inline-title--border{% endif %}
     "
-    style="
-      {% render 'typography-style', preset: 'custom', settings: block_settings, type: 'heading' %}
-      {% if block_settings.enable_border %}
-        --inline-border-style: {{ block_settings.border_style | default: 'solid' }};
-        --inline-border-width: {{ block_settings.border_width | default: 1 }}px;
-        --inline-border-color: {{ block_settings.border_color | default: '#000000' }};
-        --inline-border-radius: {{ block_settings.border_radius | default: 0 }}px;
-        --inline-padding-block: {{ block_settings.padding_block | default: 4 }}px;
-        --inline-padding-inline: {{ block_settings.padding_inline | default: 12 }}px;
-      {% endif %}
-    "
+    style="{% render 'typography-style', preset: 'custom', settings: block_settings, type: 'heading' %}"
     {{ block.shopify_attributes }}
   >
     <span>{{ collection_title }}</span>{{ suffix }}
   </span>
 {%- endif -%}
-
-{% stylesheet %}
-  .inline-title--border {
-    display: inline-block;
-    border-style: var(--inline-border-style, solid);
-    border-width: var(--inline-border-width, 1px);
-    border-color: var(--inline-border-color, currentColor);
-    border-radius: var(--inline-border-radius, 0);
-    padding-block: var(--inline-padding-block, 4px);
-    padding-inline: var(--inline-padding-inline, 12px);
-  }
-{% endstylesheet %}
 
 {% schema %}
 {
@@ -183,92 +160,6 @@
         }
       ],
       "default": "none"
-    },
-    {
-      "type": "header",
-      "content": "Border"
-    },
-    {
-      "type": "checkbox",
-      "id": "enable_border",
-      "label": "Enable border",
-      "default": false
-    },
-    {
-      "type": "select",
-      "id": "border_style",
-      "label": "Border style",
-      "options": [
-        {
-          "value": "solid",
-          "label": "Solid"
-        },
-        {
-          "value": "dashed",
-          "label": "Dashed"
-        },
-        {
-          "value": "dotted",
-          "label": "Dotted"
-        }
-      ],
-      "default": "solid",
-      "visible_if": "{{ block.settings.enable_border }}"
-    },
-    {
-      "type": "range",
-      "id": "border_width",
-      "label": "Border width",
-      "min": 1,
-      "max": 5,
-      "step": 1,
-      "unit": "px",
-      "default": 1,
-      "visible_if": "{{ block.settings.enable_border }}"
-    },
-    {
-      "type": "color",
-      "id": "border_color",
-      "label": "Border color",
-      "default": "#000000",
-      "visible_if": "{{ block.settings.enable_border }}"
-    },
-    {
-      "type": "range",
-      "id": "border_radius",
-      "label": "Border radius",
-      "min": 0,
-      "max": 50,
-      "step": 1,
-      "unit": "px",
-      "default": 0,
-      "visible_if": "{{ block.settings.enable_border }}"
-    },
-    {
-      "type": "header",
-      "content": "Padding"
-    },
-    {
-      "type": "range",
-      "id": "padding_block",
-      "label": "Vertical padding",
-      "min": 0,
-      "max": 32,
-      "step": 2,
-      "unit": "px",
-      "default": 4,
-      "visible_if": "{{ block.settings.enable_border }}"
-    },
-    {
-      "type": "range",
-      "id": "padding_inline",
-      "label": "Horizontal padding",
-      "min": 0,
-      "max": 32,
-      "step": 2,
-      "unit": "px",
-      "default": 12,
-      "visible_if": "{{ block.settings.enable_border }}"
     }
   ]
 }

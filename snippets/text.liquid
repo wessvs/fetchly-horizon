@@ -43,9 +43,6 @@
     if block_settings.background
       echo ' text-block--background '
     endif
-    if block_settings.enable_border
-      echo ' text-block--border '
-    endif
     if is_rte
       echo ' rte '
     endif
@@ -69,12 +66,6 @@
       --text-background-color: {{ block_settings.background_color | default: 'rgb(255 255 255 / 1.0)' }};
       --text-corner-radius: {{ block_settings.corner_radius }}px;
       --text-padding: max(var(--padding-2xs), calc((var(--text-corner-radius) + var(--padding-xs)) * (1 - cos(45deg))));
-    {% endif %}
-    {% if block_settings.enable_border %}
-      --text-border-style: {{ block_settings.border_style | default: 'solid' }};
-      --text-border-width: {{ block_settings.border_width | default: 1 }}px;
-      --text-border-color: {{ block_settings.border_color | default: '#000000' }};
-      --text-border-radius: {{ block_settings.border_radius | default: 0 }}px;
     {% endif %}
   "
 
@@ -225,21 +216,5 @@
   .custom-color,
   .custom-color > :is(h1, h2, h3, h4, h5, h6, p, *) {
     color: var(--color);
-  }
-
-  .text-block--border {
-    border-style: var(--text-border-style, solid);
-    border-width: var(--text-border-width, 1px);
-    border-color: var(--text-border-color, currentColor);
-    border-radius: var(--text-border-radius, 0);
-    padding: var(--padding-xs) var(--padding-sm);
-  }
-
-  .text-block--border.text-block--background {
-    /* When both border and background are enabled, use the larger padding */
-    padding-block-start: max(var(--text-padding), var(--padding-block-start, var(--padding-xs)));
-    padding-block-end: max(var(--text-padding), var(--padding-block-end, var(--padding-xs)));
-    padding-inline-start: max(var(--text-padding), var(--padding-inline-start, var(--padding-sm)));
-    padding-inline-end: max(var(--text-padding), var(--padding-inline-end, var(--padding-sm)));
   }
 {% endstylesheet %}
