@@ -2035,7 +2035,7 @@
           "blocks": {
             "group_8HiVpH": {
               "type": "group",
-              "name": "t:names.group",
+              "name": "Text and button container",
               "settings": {
                 "content_direction": "column",
                 "vertical_on_mobile": true,
