@@ -1,0 +1,125 @@
+/* 
+ * Glassmorphism Effect for Group Blocks
+ * Creates a frosted glass effect with backdrop blur
+ * 
+ * Settings available in Theme Editor:
+ * - Enable glass effect (checkbox)
+ * - Glass style: light, dark, subtle
+ * - Blur intensity: 5-50px
+ * - Background opacity: 0-50%
+ */
+
+/* Base glass effect - applied when enable_glass_effect is checked */
+.group-block--glass {
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(var(--glass-blur, 20px)) saturate(120%);
+  -webkit-backdrop-filter: blur(var(--glass-blur, 20px)) saturate(120%);
+  transition: all 0.3s ease;
+}
+
+/* Light glass style - subtle warm tinted glass */
+.group-block--glass.group-block--glass-light {
+  background: rgba(255, 250, 245, var(--glass-opacity, 0.08)) !important;
+  border: 1px solid rgba(255, 250, 240, 0.15) !important;
+  box-shadow: 
+    0 4px 24px rgba(0, 0, 0, 0.08),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.group-block--glass.group-block--glass-light:hover {
+  background: rgba(255, 250, 245, calc(var(--glass-opacity, 0.08) + 0.03)) !important;
+  border-color: rgba(255, 250, 240, 0.2) !important;
+}
+
+/* Dark glass style (default for this design) - dark frosted glass */
+.group-block--glass.group-block--glass-dark {
+  background: rgba(60, 50, 45, var(--glass-opacity, 0.35)) !important;
+  border: 1px solid rgba(200, 180, 160, 0.2) !important;
+  box-shadow: 
+    0 4px 30px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.group-block--glass.group-block--glass-dark:hover {
+  background: rgba(60, 50, 45, calc(var(--glass-opacity, 0.35) + 0.05)) !important;
+  border-color: rgba(200, 180, 160, 0.25) !important;
+}
+
+/* Subtle glass style - very minimal effect */
+.group-block--glass.group-block--glass-subtle {
+  background: rgba(80, 70, 60, var(--glass-opacity, 0.25)) !important;
+  border: 1px solid rgba(180, 160, 140, 0.15) !important;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
+}
+
+.group-block--glass.group-block--glass-subtle:hover {
+  background: rgba(80, 70, 60, calc(var(--glass-opacity, 0.25) + 0.03)) !important;
+  border-color: rgba(180, 160, 140, 0.2) !important;
+}
+
+/* Override color scheme background for glass effect */
+.group-block--glass[class*="color-"] {
+  --color-background: transparent;
+  background-color: transparent !important;
+}
+
+/* Ensure text remains readable on glass - cream/warm white text */
+.group-block--glass .text-block,
+.group-block--glass p,
+.group-block--glass h1,
+.group-block--glass h2,
+.group-block--glass h3,
+.group-block--glass h4,
+.group-block--glass h5,
+.group-block--glass h6 {
+  color: rgba(255, 250, 240, 0.95);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Secondary text - slightly dimmer */
+.group-block--glass .text-block p,
+.group-block--glass .rte p {
+  color: rgba(255, 250, 240, 0.8);
+}
+
+/* Icon styling on glass - cream colored icons */
+.group-block--glass .icon-block svg,
+.group-block--glass .icon-block img {
+  filter: 
+    drop-shadow(0 1px 2px rgba(0, 0, 0, 0.15))
+    brightness(1.1);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 749px) {
+  .group-block--glass {
+    backdrop-filter: blur(calc(var(--glass-blur, 20px) * 0.8)) saturate(110%);
+    -webkit-backdrop-filter: blur(calc(var(--glass-blur, 20px) * 0.8)) saturate(110%);
+  }
+}
+
+/* Fallback for browsers that don't support backdrop-filter */
+@supports not (backdrop-filter: blur(20px)) {
+  .group-block--glass.group-block--glass-light {
+    background: rgba(240, 235, 230, 0.9) !important;
+  }
+  
+  .group-block--glass.group-block--glass-dark {
+    background: rgba(70, 60, 55, 0.92) !important;
+  }
+  
+  .group-block--glass.group-block--glass-subtle {
+    background: rgba(100, 90, 80, 0.88) !important;
+  }
+}
+
+/* Smooth transitions */
+@media (prefers-reduced-motion: no-preference) {
+  .group-block--glass {
+    transition: 
+      background 0.25s ease,
+      border-color 0.25s ease,
+      box-shadow 0.25s ease;
+  }
+}

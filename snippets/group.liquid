@@ -20,16 +20,22 @@
     spacing-style
     size-style
     {% if settings.inherit_color_scheme == false %} color-{{ settings.color_scheme }}{% endif %}
+    {% if settings.enable_glass_effect %}group-block--glass group-block--glass-{{ settings.glass_style | default: 'dark' }}{% endif %}
     {{ class }}
   "
   style="
     {% render 'border-override', settings: settings %}
     {% render 'spacing-style', settings: settings %}
     {% render 'size-style', settings: settings %}
+    {% if settings.enable_glass_effect %}
+      --glass-blur: {{ settings.glass_blur | default: 25 }}px;
+      --glass-opacity: {{ settings.glass_opacity | default: 35 | divided_by: 100.0 }};
+    {% endif %}
     {{ style }}
   "
   {{ shopify_attributes }}
   data-testid="group-block"
+  {% if settings.enable_glass_effect %}data-glass-effect="true"{% endif %}
 >
   {%- if settings.link != blank -%}
     <a
