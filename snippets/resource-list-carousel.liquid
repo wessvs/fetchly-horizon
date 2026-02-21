@@ -51,9 +51,13 @@
   {% endif %}
 {% endcapture %}
 
+{% liquid
+  assign dots_color = settings.dots_color | default: '#A08977'
+%}
+
 <div
-  class="resource-list__carousel"
-  style="{{ gutter_style }} --slide-width-max: {{ slide_width_max | default: '300px' }};"
+  class="resource-list__carousel{% if show_dots %} resource-list__carousel--custom-dots{% endif %}"
+  style="{{ gutter_style }} --slide-width-max: {{ slide_width_max | default: '300px' }};{% if show_dots %} --dots-color: {{ dots_color }};{% endif %}"
 >
   {% render 'slideshow',
     ref: slideshow_ref,
