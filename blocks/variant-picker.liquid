@@ -54,41 +54,6 @@
     },
     {
       "type": "header",
-      "content": "Color circles from metafield"
-    },
-    {
-      "type": "checkbox",
-      "id": "use_color_metafield",
-      "label": "Enable color circles",
-      "info": "Show color circles for Color options using variant metafield",
-      "default": false
-    },
-    {
-      "type": "text",
-      "id": "color_option_name",
-      "label": "Color option name",
-      "info": "The name of the option to show as color circles (e.g. Color, Cor)",
-      "default": "Color",
-      "visible_if": "{{ block.settings.use_color_metafield }}"
-    },
-    {
-      "type": "text",
-      "id": "color_metafield_namespace",
-      "label": "Metafield namespace",
-      "info": "The namespace of the color metafield (e.g. custom)",
-      "default": "custom",
-      "visible_if": "{{ block.settings.use_color_metafield }}"
-    },
-    {
-      "type": "text",
-      "id": "color_metafield_key",
-      "label": "Metafield key",
-      "info": "The key of the color metafield (e.g. color)",
-      "default": "color",
-      "visible_if": "{{ block.settings.use_color_metafield }}"
-    },
-    {
-      "type": "header",
       "content": "t:content.padding"
     },
     {
