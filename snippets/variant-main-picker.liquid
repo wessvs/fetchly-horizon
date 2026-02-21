@@ -38,17 +38,14 @@
           assign swatch_count = product_option.values | map: 'swatch' | compact | size
           assign variant_style = block_settings.variant_style
 
-          # Check if this option should use color metafield circles
+          # Check if this option is Color - will use metafield color circles
           assign use_color_circles = false
-          assign color_option_name = block_settings.color_option_name | default: 'Color'
-          assign color_metafield_namespace = block_settings.color_metafield_namespace | default: 'custom'
-          assign color_metafield_key = block_settings.color_metafield_key | default: 'color'
-          
-          if block_settings.use_color_metafield and product_option.name == color_option_name
+          assign option_name_lower = product_option.name | downcase
+          if option_name_lower == 'color' or option_name_lower == 'cor' or option_name_lower == 'colour'
             assign use_color_circles = true
           endif
 
-          if swatch_count > 0 and block_settings.show_swatches
+          if swatch_count > 0 and block_settings.show_swatches and use_color_circles == false
             if block_settings.variant_style == 'dropdown'
               assign variant_style = 'swatch_dropdown'
             else
@@ -96,10 +93,10 @@
               {% endif %}
               
               {%- liquid
-                # Get the color from metafield if using color circles
+                # Get the color from fixed metafield custom.color_swatch
                 assign metafield_color = nil
                 if use_color_circles and product_option_value.variant
-                  assign metafield_color = product_option_value.variant.metafields[color_metafield_namespace][color_metafield_key]
+                  assign metafield_color = product_option_value.variant.metafields.custom.color_swatch
                 endif
               -%}
               
