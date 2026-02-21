@@ -1771,7 +1771,7 @@
               "type": "_accordion-row",
               "settings": {
                 "heading": "Do you have US-based stock?",
-                "open_by_default": false,
+                "open_by_default": true,
                 "icon": "none",
                 "width": 20
               },
@@ -1810,7 +1810,7 @@
               "type": "_accordion-row",
               "settings": {
                 "heading": "Question text goes here",
-                "open_by_default": false,
+                "open_by_default": true,
                 "icon": "none",
                 "width": 20
               },
@@ -1888,7 +1888,7 @@
               "type": "_accordion-row",
               "settings": {
                 "heading": "Question text goes here",
-                "open_by_default": false,
+                "open_by_default": true,
                 "icon": "none",
                 "width": 20
               },
@@ -1927,7 +1927,7 @@
               "type": "_accordion-row",
               "settings": {
                 "heading": "Question text goes here",
-                "open_by_default": false,
+                "open_by_default": true,
                 "icon": "none",
                 "width": 20
               },
