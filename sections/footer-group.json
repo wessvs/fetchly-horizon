@@ -143,7 +143,7 @@
             "text_LWt8Pz": {
               "type": "text",
               "settings": {
-                "text": "<p>SUBSCRIBE</p>",
+                "text": "<p><strong>SUBSCRIBE</strong></p>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",

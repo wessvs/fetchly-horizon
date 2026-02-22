@@ -1217,7 +1217,8 @@
                   "type": "add-to-cart",
                   "static": true,
                   "settings": {
-                    "style_class": "button-secondary"
+                    "style_class": "button-secondary",
+                    "show_icon": false
                   },
                   "blocks": {}
                 },
@@ -1713,7 +1714,8 @@
                       "type": "add-to-cart",
                       "static": true,
                       "settings": {
-                        "style_class": "button-secondary"
+                        "style_class": "button-secondary",
+                        "show_icon": false
                       },
                       "blocks": {}
                     },
