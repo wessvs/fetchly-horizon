@@ -172,12 +172,17 @@
 
   .slide__image-container > .slide__image,
   .slide__image-container > .slide__video,
-  .slide__image-container > .slide__video-poster {
+  .slide__image-container > .slide__video-poster,
+  .slide__image-container > .slide__picture > .slide__image {
     position: relative;
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center center;
+  }
+
+  .slide__image-container > .slide__picture {
+    display: contents;
   }
 
   .slide__image-container > .slide__video-poster {
