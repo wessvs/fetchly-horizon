@@ -47,11 +47,23 @@
       "default": true
     },
     {
+      "type": "header",
+      "content": "Color swatches"
+    },
+    {
+      "type": "checkbox",
+      "id": "use_color_circles",
+      "label": "Show color circles from metafield",
+      "info": "Display color circles using variant metafield custom.color_swatch",
+      "default": false
+    },
+    {
       "type": "checkbox",
       "id": "hide_color_label",
       "label": "Hide color option label",
       "info": "Hides the 'Color: Blue' text above color circles",
-      "default": false
+      "default": false,
+      "visible_if": "{{ block.settings.use_color_circles }}"
     },
     {
       "type": "text_alignment",
