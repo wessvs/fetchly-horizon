@@ -106,7 +106,7 @@
             "vertical_alignment": "center",
             "align_baseline": false,
             "horizontal_alignment_flex_direction_column": "flex-start",
-            "vertical_alignment_flex_direction_column": "center",
+            "vertical_alignment_flex_direction_column": "flex-start",
             "gap": 6,
             "width": "fit-content",
             "custom_width": 100,
@@ -214,12 +214,33 @@
                 "padding-inline-end": 0
               },
               "blocks": {}
+            },
+            "social_links_EERjDW": {
+              "type": "social-links",
+              "name": "t:names.social_media_links",
+              "settings": {
+                "facebook_url": "/",
+                "instagram_url": "/",
+                "youtube_url": "",
+                "tiktok_url": "",
+                "twitter_url": "",
+                "threads_url": "",
+                "linkedin_url": "",
+                "bluesky_url": "",
+                "snapchat_url": "",
+                "pinterest_url": "",
+                "tumblr_url": "",
+                "vimeo_url": "",
+                "custom_url": ""
+              },
+              "blocks": {}
             }
           },
           "block_order": [
             "text_LWt8Pz",
             "text_f9CFLH",
-            "email_signup_XK9cBe"
+            "email_signup_XK9cBe",
+            "social_links_EERjDW"
           ]
         }
       },
