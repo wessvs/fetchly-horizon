@@ -986,6 +986,8 @@
               "settings": {
                 "variant_style": "buttons",
                 "show_swatches": true,
+                "use_color_circles": false,
+                "hide_color_label": false,
                 "alignment": "left",
                 "padding-block-start": 0,
                 "padding-block-end": 8,
@@ -1489,7 +1491,9 @@
               "name": "t:names.product_variant_picker",
               "settings": {
                 "variant_style": "buttons",
-                "show_swatches": true,
+                "show_swatches": false,
+                "use_color_circles": true,
+                "hide_color_label": false,
                 "alignment": "left",
                 "padding-block-start": 0,
                 "padding-block-end": 8,
