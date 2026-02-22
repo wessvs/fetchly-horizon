@@ -534,11 +534,11 @@
       "
       style="{% render 'layout-panel-style', settings: section.settings %}"
     >
-      {% if section.settings.content_below_media_mobile %}
-        <div class="hero__content-mobile-color color-{{ section.settings.color_scheme_mobile }}">
+      
+        <div {% if section.settings.content_below_media_mobile %}class="hero__content-mobile-color color-{{ section.settings.color_scheme_mobile }}"{% endif %}>
           {% content_for 'blocks' %}
         </div>
-      {% endif %}
+
     </div>
   </div>
 </div>
