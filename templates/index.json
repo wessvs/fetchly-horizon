@@ -612,6 +612,7 @@
         "media_type_1": "video",
         "video_1": "shopify://files/videos/black-woman-face-and-traditional-in-studio-with-f-2025-12-17-23-33-30-utc.mp4",
         "media_type_2": "image",
+        "content_below_media_mobile": true,
         "stack_media_on_mobile": false,
         "custom_mobile_media": false,
         "media_type_1_mobile": "image",
@@ -980,6 +981,36 @@
               },
               "blocks": {}
             },
+            "variant_picker_NEkpNj": {
+              "type": "variant-picker",
+              "name": "t:names.product_variant_picker",
+              "settings": {
+                "variant_style": "buttons",
+                "show_swatches": true,
+                "use_color_circles": true,
+                "hide_color_label": true,
+                "alignment": "left",
+                "padding-block-start": 0,
+                "padding-block-end": 8,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "swatches_nDfcHz": {
+              "type": "swatches",
+              "name": "t:names.swatches",
+              "settings": {
+                "product_swatches_alignment": "center",
+                "product_swatches_alignment_mobile": "center",
+                "hide_padding": false,
+                "product_swatches_padding_top": 4,
+                "product_swatches_padding_bottom": 0,
+                "product_swatches_padding_left": 0,
+                "product_swatches_padding_right": 0
+              },
+              "blocks": {}
+            },
             "product_title_YXxMTj": {
               "type": "product-title",
               "name": "t:names.product_title",
@@ -1013,9 +1044,9 @@
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
-                "type_preset": "rte",
+                "type_preset": "custom",
                 "font": "var(--font-body--family)",
-                "font_size": "1rem",
+                "font_size": "0.75rem",
                 "line_height": "normal",
                 "letter_spacing": "normal",
                 "case": "none",
@@ -1082,8 +1113,8 @@
                     "alignment": "left",
                     "font": "var(--font-body--family)",
                     "font_size": "1rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
+                    "line_height": "loose",
+                    "letter_spacing": "loose",
                     "case": "none",
                     "color": "var(--color-foreground)",
                     "padding-block-start": 0,
@@ -1097,9 +1128,9 @@
                   "type": "review",
                   "name": "t:names.product_review_stars",
                   "settings": {
-                    "stars_style": "shaded",
+                    "stars_style": "outline",
                     "show_number": true,
-                    "rating_color": "primary",
+                    "rating_color": "foreground",
                     "type_preset": "paragraph",
                     "width": "100%",
                     "alignment": "left"
@@ -1170,7 +1201,7 @@
                 "stacking": false,
                 "show_pickup_availability": false,
                 "gift_card_form": false,
-                "padding-block-start": 0,
+                "padding-block-start": 12,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0
@@ -1187,7 +1218,8 @@
                   "type": "add-to-cart",
                   "static": true,
                   "settings": {
-                    "style_class": "button-secondary"
+                    "style_class": "button-secondary",
+                    "show_icon": false
                   },
                   "blocks": {}
                 },
@@ -1204,6 +1236,8 @@
           },
           "block_order": [
             "product_card_gallery_677WP3",
+            "variant_picker_NEkpNj",
+            "swatches_nDfcHz",
             "product_title_YXxMTj",
             "text_RRqPWy",
             "product_card_group_pdmCtd",
@@ -1244,6 +1278,7 @@
         "image_1": "shopify://shop_images/UGC_Gallery.png",
         "video_1": "shopify://files/videos/black-woman-face-and-traditional-in-studio-with-f-2025-12-17-23-33-30-utc.mp4",
         "media_type_2": "image",
+        "content_below_media_mobile": false,
         "stack_media_on_mobile": false,
         "custom_mobile_media": true,
         "media_type_1_mobile": "image",
@@ -1459,7 +1494,9 @@
               "name": "t:names.product_variant_picker",
               "settings": {
                 "variant_style": "buttons",
-                "show_swatches": true,
+                "show_swatches": false,
+                "use_color_circles": true,
+                "hide_color_label": false,
                 "alignment": "left",
                 "padding-block-start": 0,
                 "padding-block-end": 8,
@@ -1679,7 +1716,8 @@
                       "type": "add-to-cart",
                       "static": true,
                       "settings": {
-                        "style_class": "button-secondary"
+                        "style_class": "button-secondary",
+                        "show_icon": false
                       },
                       "blocks": {}
                     },
@@ -1756,6 +1794,7 @@
           "settings": {
             "media_type_1": "image",
             "image_1": "shopify://shop_images/Content.png",
+            "custom_mobile_image": false,
             "content_direction": "column",
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",
@@ -2374,6 +2413,8 @@
           "settings": {
             "media_type_1": "image",
             "image_1": "shopify://shop_images/UGC_Gallery.png",
+            "custom_mobile_image": true,
+            "image_1_mobile": "shopify://shop_images/Frame_3498.png",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",
