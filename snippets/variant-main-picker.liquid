@@ -337,7 +337,7 @@
 
   /* Color circles from metafield */
   .variant-option--color-circles {
-    gap: var(--gap-sm);
+    gap: var(--gap-2xs, 4px);
   }
 
   .variant-option__button-label--color-circle {
@@ -361,7 +361,7 @@
 
   .variant-option__button-label--color-circle:has(input:checked) .variant-option__color-circle {
     border-color: var(--color-foreground);
-    box-shadow: 0 0 0 2px var(--color-background), 0 0 0 4px var(--color-foreground);
+    box-shadow: 0 0 0 1px var(--color-background), 0 0 0 2px var(--color-foreground);
   }
 
   .variant-option__button-label--color-circle:hover .variant-option__color-circle {
