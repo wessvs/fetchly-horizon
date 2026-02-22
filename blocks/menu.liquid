@@ -64,7 +64,7 @@
           <ul class="list-unstyled">
             {% for link in menu.links %}
               <li class="menu__item {{ block_settings.link_preset }}">
-                <a href="{{ link.url }}" {% if link.title == 'SALE' %} style="color: red"{% endif %}>
+                <a href="{{ link.url }}">
                   {{ link.title }}
                 </a>
               </li>
