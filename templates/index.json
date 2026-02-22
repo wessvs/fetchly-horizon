@@ -1792,6 +1792,7 @@
           "settings": {
             "media_type_1": "image",
             "image_1": "shopify://shop_images/Content.png",
+            "custom_mobile_image": false,
             "content_direction": "column",
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",
@@ -2410,6 +2411,8 @@
           "settings": {
             "media_type_1": "image",
             "image_1": "shopify://shop_images/UGC_Gallery.png",
+            "custom_mobile_image": true,
+            "image_1_mobile": "shopify://shop_images/Frame_3498.png",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",
