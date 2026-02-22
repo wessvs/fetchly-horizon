@@ -101,7 +101,7 @@
             {% endif %}
             ref="menuitem"
           >
-            <span class="menu-list__link-title">{{- link.title -}}</span>
+            <span class="menu-list__link-title {% if link.title == 'SALE' %} menu-list__link-title--red{% endif %}" >{{- link.title -}}</span>
           </a>
           {%- if link.links != blank -%}
             <div class="menu-list__submenu{{ color_scheme_classes }}" ref="submenu[]">
@@ -302,6 +302,11 @@
   }
   [slot='overflow'] .menu-list__link-title {
     padding-inline: 0;
+  }
+
+  .menu-list__link-title.menu-list__link-title--red {
+    color: #DC2626;
+    font-weight: 700;
   }
 
   .menu-list__list-item:not([slot='overflow']) {

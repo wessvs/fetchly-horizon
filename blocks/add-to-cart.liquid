@@ -11,6 +11,7 @@
 {% liquid
   assign class = 'add-to-cart-button ' | append: block.settings.style_class
   assign id = 'BuyButtons-ProductSubmitButton-' | append: block.id
+  assign show_icon = block.settings.show_icon
 %}
 
 <span
@@ -21,6 +22,7 @@
     id: id,
     class: class,
     can_add_to_cart: can_add_to_cart,
+    show_icon: show_icon,
     product: closest.product,
     add_to_cart_text: add_to_cart_text,
     data_testid: 'standalone-add-to-cart'
@@ -44,9 +46,15 @@
         {
           "value": "button-secondary",
           "label": "t:options.secondary"
-        }
+        },
       ],
       "default": "button-secondary"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_icon",
+      "label": "Show icon",
+      "default": false
     }
   ]
 }
