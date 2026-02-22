@@ -41,7 +41,7 @@
           # Check if this option is Color - will use metafield color circles
           assign use_color_circles = false
           assign option_name_lower = product_option.name | downcase
-          if option_name_lower == 'color' or option_name_lower
+          if option_name_lower == 'color'
             assign use_color_circles = true
           endif
 
