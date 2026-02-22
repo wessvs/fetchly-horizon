@@ -986,8 +986,8 @@
               "settings": {
                 "variant_style": "buttons",
                 "show_swatches": true,
-                "use_color_circles": false,
-                "hide_color_label": false,
+                "use_color_circles": true,
+                "hide_color_label": true,
                 "alignment": "left",
                 "padding-block-start": 0,
                 "padding-block-end": 8,
