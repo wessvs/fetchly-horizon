@@ -63,7 +63,7 @@
         {% if menu %}
           <ul class="list-unstyled">
             {% for link in menu.links %}
-              <li class="menu__item {{ block_settings.link_preset }}">
+              <li class="menu__item {{ block_settings.link_preset }} {% if link.title == 'SALE' %} menu-list__link-title--red{% endif %}">
                 <a href="{{ link.url }}">
                   {{ link.title }}
                 </a>
@@ -87,6 +87,11 @@
 
   .menu__item + .menu__item {
     margin-block-start: var(--spacing--size);
+  }
+
+  .menu__item.menu-list__link-title--red {
+    color: #DC2626;
+    font-weight: 700;
   }
 
   .menu .menu__heading--empty {
