@@ -354,9 +354,9 @@
     height: 14px;
     border-radius: 50%;
     background: var(--color-circle-bg, #ccc);
-    border: 2px solid rgb(var(--color-foreground-rgb) / 0.15);
+    border: 1px solid rgb(var(--color-foreground-rgb) / 0.15);
     transition: transform 0.15s ease, box-shadow 0.15s ease;
-    box-shadow: 0 1px 3px rgb(0 0 0 / 0.1);
+    box-shadow: 0 1px 2px rgb(0 0 0 / 0.08);
   }
 
   .variant-option__button-label--color-circle:has(input:checked) .variant-option__color-circle {
@@ -365,7 +365,8 @@
   }
 
   .variant-option__button-label--color-circle:hover .variant-option__color-circle {
-    transform: scale(1.1);
+    transform: scale(1.15);
+    box-shadow: 0 2px 4px rgb(0 0 0 / 0.12);
   }
 
   .variant-option__button-label--color-circle:has(input[aria-disabled="true"]) .variant-option__color-circle {
