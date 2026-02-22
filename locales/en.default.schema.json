@@ -762,6 +762,7 @@
     "always_stack_buttons": "Always stack buttons",
     "aspect_ratio": "Aspect ratio",
     "custom_mobile_media": "Show different media on mobile",
+    "content_below_media_mobile": "Content below media on mobile",
     "stack_media_on_mobile": "Stack media",
     "auto_rotate_announcements": "Auto-rotate announcements",
     "auto_rotate_slides": "Auto-rotate slides",

@@ -561,6 +561,7 @@
     "auto_load_products": "Carregar produtos automaticamente na rolagem",
     "products_per_page": "Produtos por página",
     "custom_mobile_media": "Mostrar mídia diferente no celular",
+    "content_below_media_mobile": "Conteúdo abaixo da mídia no celular",
     "stack_media_on_mobile": "Empilhar mídia",
     "media_type_1": "Tipo de mídia",
     "media_type_2": "Tipo de mídia 2",
